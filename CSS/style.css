@@ -1,0 +1,380 @@
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+#section {
+    margin: 10px;
+    display: grid;
+    grid-template-areas:
+        'top-aside main main main main'
+        'bottom-aside main main main main'
+        'left-footer right-footer right-footer right-footer vol-right-footer';
+    gap: 6px;
+    height: 96vh;
+}
+
+/* left-top */
+
+#top-aside {
+    /* border: 2px solid red; */
+    border-radius: 10px;
+    background-color: #121212;
+    grid-area: top-aside;
+}
+
+#top-aside div {
+    /* border: 2px solid greenyellow; */
+    display: flex;
+    align-items: center;
+    margin: 16px;
+    width: fit-content;
+    cursor: pointer;
+}
+
+#top-aside>img {
+    margin-top: 16px;
+    margin-left: 16px;
+}
+
+#top-aside div a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-left: 28px;
+}
+
+#top-aside img {
+    /* border: 2px solid red; */
+    height: 28px;
+    filter: invert(100%);
+    /* margin-left: 40px; */
+}
+
+/* left-bottom */
+
+#bottom-aside {
+    /* border: 2px solid red; */
+    background-color: #121212;
+    border-radius: 10px;
+    grid-area: bottom-aside;
+    padding: 12px;
+}
+
+#bat {
+    /* border: 2px solid rgb(4, 255, 0); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#clopse-button {
+    /* border: 2px solid rgb(64, 0, 255); */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#clopse-button span {
+    /* border: 2px solid red; */
+    margin: 0px 40px 0px 20px;
+    font-size: 1.1rem;
+}
+
+#clopse-button img {
+    filter: invert(100%);
+    height: 28px;
+}
+
+#lib-button {
+    /* border: 2px solid red; */
+    display: flex;
+    padding-right: 6px;
+}
+
+#lib-button div {
+    /* border: 2px solid red; */
+    border-radius: 100%;
+    margin-right: 16px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#lib-button img {
+    /* border: 2px solid red; */
+    border-radius: 100px;
+    filter: invert(100%);
+    height: 16px;
+}
+
+/*  */
+
+.create-playlist {
+    background-color: #242424;
+    padding: 20px;
+    margin: 20px 0px 20px 0px;
+    border-radius: 10px;
+    display: grid;
+    gap: 10px;
+}
+
+.create-playlist button {
+    border: 2px solid white;
+    border-radius: 40px;
+    padding: 6px 14px;
+    width: fit-content;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#to-scroll {
+    /* border: 2px solid red; */
+    height: 132px;
+    overflow: auto;
+    margin-bottom: 20px;
+}
+
+/* main */
+
+#main {
+    background-color: #121212;
+    grid-area: main;
+    border-radius: 1%;
+}
+
+#main-header {
+    padding: 10px;
+    background-color: #101010;
+    border-radius: 8px 8px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+}
+
+#button-1 {
+    background: none;
+    border: none;
+    margin: 16px;
+    font-size: 1.2rem;
+    color: #a2a2a2;
+    cursor: pointer;
+}
+#button-1:hover {
+    transform: scale(110%);
+}
+
+#button-2 {
+    padding: 12px 25px;
+    border-radius: 60px;
+    border: none;
+    font-size: 1.2rem;
+    color: black;
+    cursor: pointer;
+}
+#button-2:hover {
+    transform: scale(110%);
+}
+
+#main-header img {
+    border-radius: 100%;
+    filter: invert(100%);
+    background-color: white;
+    padding: 6px;
+    cursor: not-allowed;
+}
+
+#main-header-img-phone {
+    display: none
+}
+
+/* playlist */
+
+#Song-area{
+    /* border: 2px solid red; */
+    padding: 18px 18px 0px 18px;
+}
+#card-contanner{
+    /* border: 2px solid red; */
+    margin-top: 12px;
+    max-height: 56vh;
+    overflow-x: auto;
+}
+
+#btn-img-play{
+    border: 2px solid rgb(0, 174, 255);
+}
+
+.card-play{
+    border: none;
+    background: none;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    right: 21px;
+    opacity: 0;
+    transition: all 0.333s ease-in 0s;
+}
+.card:hover .card-play{
+    bottom: 66px;
+    opacity: 1;
+}
+.card button img{
+    border-radius: 100%;
+}
+
+.card {
+    /* border: 2px solid red; */
+    border-radius: 10px;
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+}
+.card:hover {
+    background-color: #242424;
+}
+
+
+#left-footer-policy {
+    border: 2px solid #121212;
+    grid-area: left-footer;
+    display: flex;
+    flex-wrap: wrap;
+    width: 262px;
+    gap: 15px;
+    font-size: 0.8rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+#left-footer-policy a {
+    color: #9ea4a7;
+    text-decoration: none;
+}
+
+#to-change-lang {
+    display: grid;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#globe-img {
+    filter: invert(100%);
+    grid-area: globe-img;
+    position: relative;
+    top: 1.8px;
+    left: 16px;
+}
+
+#english-btn {
+    grid-area: english-btn;
+}
+
+#english-btn button {
+    border: 2px solid white;
+    border-radius: 50px;
+    padding: 8px 20px 8px 40px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.footer{
+    /* border: 2px solid red; */
+    display: flex;
+    padding: 6px 6px 0px 6px;
+}
+
+#right-footer {
+    /* border: 2px solid red; */
+    grid-area: right-footer;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+#vol-right-footer{
+    /* border: 2px solid red; */
+    grid-area: vol-right-footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#right-footer div{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#right-footer img{
+    border-radius: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 2px;
+}
+#right-footer img:hover{
+    background-color:#0c0c0c;
+}
+#right-footer button{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#pause_button{
+    display: none;
+}
+#left-footer {
+    grid-area: left-footer;
+    justify-content: center;
+}
+
+#left-footer img {
+    margin-right: 18px;
+}
+
+/*seekbar */
+
+#seekBar {
+    width: 100%;
+}
+
+#volno{
+    display: none;
+}
+
+.onlyho:hover{
+    cursor: pointer;
+}
+
+#maronly{
+    margin: 10px;
+}
+
+#control{
+    width: 100%;
+    gap: 10px;
+}
+
+
+#time{
+    /* border: 2px solid red; */
+    width: 10%;
+}
+
+#duration{
+    /* border: 2px solid red; */
+    width: 10%;
+}

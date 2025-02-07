@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#00FF00">
+    <!-- Background rectangle -->
+    <rect x="0" y="-960" width="960" height="960" fill="#00FF00"/>
+
+    <!-- Pause icon -->
+    <g transform="translate(320, 0)" fill="#000000">
+        <rect x="-60" y="-692" width="160" height="480"/>
+        <rect x="220" y="-692" width="160" height="480"/>
+    </g>
+</svg>

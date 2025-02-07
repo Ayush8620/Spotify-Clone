@@ -1,0 +1,104 @@
+@media only screen and (max-width: 768px) {
+
+    /* Hide the sidebar initially */
+    #bottom-aside,
+    #top-aside {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 60%;
+        height: 100%;
+        background-color: #121212;
+        padding: 20px;
+        z-index: 100;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* Show the sidebar when active */
+    .show-sidebar {
+        display: block;
+        transform: translateX(0);
+    }
+
+    /* Adjust main section */
+    #main {
+        width: 100%;
+        height: 92%;
+        border-radius: 8px;
+    }
+
+    #Song-area h1{
+        font-size: 26px;
+    }
+
+    #button-1, #button-2{
+        font-size: 0.8rem;
+    }
+
+    #card-contanner{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Add a menu button */
+    #menu-button {
+        display: block;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        background: #1DB954;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        z-index: 101;
+        cursor: pointer;
+    }
+
+    /* Volume control adjustments */
+    #vol-seekBar {
+        width: 80px;
+        height: 5px;
+    }
+
+    /* Keep music player fixed */
+    #right-footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #121212;
+        padding: 10px;
+        z-index: 99;
+    }
+
+    #main-header-img {
+        display: none;
+
+    }
+
+    #main-header-img-phone {
+        display: block;
+    }
+
+    #main-header-img-phone img {
+        border-radius: 0%;
+        background-color: #EFEFEF;
+        padding: 0;
+    }
+
+    #left-footer{
+        display: none;
+        
+    }
+    #right-footer{
+        border-radius: 34px;
+        width: 98%;
+    }
+    
+    #vol-right-footer{
+        display: none;
+
+    }
+}
