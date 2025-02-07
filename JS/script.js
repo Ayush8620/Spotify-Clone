@@ -4,7 +4,7 @@ let song = [] // to store song links
 let song_title = [] // to store title of song
 
 async function getsongs() {
-    let urls = await fetch("http://127.0.0.1:5503/songs/") //getting song data from URL
+    let urls = await fetch("https://github.com/Ayush8620/Spotify-Clone/tree/main/Songs") //getting song data from URL
     let response = await urls.text() // coverting data into txt file which is in html document format 
     let div = document.createElement("div") // to extrate song links we create div in which we 
     div.innerHTML = response // paste the html doc 
@@ -23,7 +23,7 @@ async function cardmaking() {
 
     let index = 0
     song.forEach(element => { // getting song links from song array one by one
-        title = element.replace("http://127.0.0.1:5503/songs/", "") //filter the title from the links, remove prefex
+        title = element.replace("https://github.com/Ayush8620/Spotify-Clone/tree/main/Songs", "") //filter the title from the links, remove prefex
         title = title.replace(".m4a", "") //filter the title from the links, remove extention
         title = decodeURIComponent(title); // replace %20 with space from title
 
